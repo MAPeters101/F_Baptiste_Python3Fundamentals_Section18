@@ -53,5 +53,26 @@ print(hex(id(add)))
 print(add.__closure__)
 print('-'*80)
 
+def add(a, b, c):
+    return a+b+c
+add = log(add)
+
+def greet(name):
+    return f'Hello {name}!'
+greet = log(greet)
+
+def join(data, *, item_sep=',', line_sep='\n'):
+    return line_sep.join(
+        [
+            item_sep.join(str(item) for item in row)
+            for row in data
+        ]
+    )
+join = log(join)
+
+print(greet('Python'))
+
+
+
 
 
