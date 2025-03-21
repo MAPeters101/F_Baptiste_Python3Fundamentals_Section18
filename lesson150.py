@@ -8,7 +8,7 @@ def add(a, b, c):
     return a+b+c
 
 def greet(name):
-    return f'Hello {name}'
+    return f'Hello {name}!'
 
 def join(data, *, item_sep=',', line_sep='\n'):
     return line_sep.join(
@@ -17,3 +17,10 @@ def join(data, *, item_sep=',', line_sep='\n'):
             for row in data
         ]
     )
+
+print(add(1, 2, 3))
+print(greet('Python'))
+print(join([[1,2,3],[4,5,6],[7,8,9]]))
+
+
+
