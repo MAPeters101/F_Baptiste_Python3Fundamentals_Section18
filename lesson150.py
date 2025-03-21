@@ -21,6 +21,13 @@ def join(data, *, item_sep=',', line_sep='\n'):
 print(add(1, 2, 3))
 print(greet('Python'))
 print(join([[1,2,3],[4,5,6],[7,8,9]]))
+print('-'*80)
 
+add_wrapped = wrapper(add)
+greet_wrapped = wrapper(greet)
+join_wrapped = wrapper(join)
 
+print(add_wrapped(1,2,3))
+print(greet_wrapped('Python'))
+print(join_wrapped([[1,2,3],[4,5,6],[7,8,9]]))
 
