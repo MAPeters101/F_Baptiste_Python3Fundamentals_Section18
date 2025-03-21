@@ -45,5 +45,7 @@ join_logged = log(join)
 
 print(add_logged(1,2,3))
 print(greet_logged('Python'))
+print('-'*80)
+
 
 
