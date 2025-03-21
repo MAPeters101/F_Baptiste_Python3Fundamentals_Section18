@@ -47,5 +47,11 @@ print(add_logged(1,2,3))
 print(greet_logged('Python'))
 print('-'*80)
 
+print(hex(id(add)))
+add = log(add)
+print(hex(id(add)))
+print(add.__closure__)
+print('-'*80)
+
 
 
