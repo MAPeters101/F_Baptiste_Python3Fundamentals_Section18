@@ -32,4 +32,18 @@ print(greet_wrapped('Python'))
 print(join_wrapped([[1,2,3],[4,5,6],[7,8,9]]))
 print('-'*80)
 
+def log(func):
+    def inner(*args, **kwargs):
+        result = func(*args, **kwargs)
+        print(f'{func.__name__} called... result={result}')
+        return result
+    return inner
+
+add_logged = log(add)
+greet_logged = log(greet)
+join_logged = log(join)
+
+print(add_logged(1,2,3))
+print(greet_logged('Python'))
+
 
