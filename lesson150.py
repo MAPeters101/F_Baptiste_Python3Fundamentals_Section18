@@ -79,5 +79,14 @@ def add(a, b, c):
 print(add(1,2,3))
 print('-'*80)
 
-
+import logging
+logging.basicConfig(
+    format='%(asctime)s %(levelname)s: %(message)s',
+    level=logging.DEBUG
+)
+logger = logging.getLogger('Custom Log')
+logger.debug('debug message')
+logger.error('some error happened')
+logger.warning('warning message')
+print('-'*80)
 
