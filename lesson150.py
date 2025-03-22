@@ -118,7 +118,9 @@ result = add(1,2,3)
 print(result)
 print('-'*80)
 
-
+result = join([range(10) for _ in range(10)])
+print(result)
+print('.'*80)
 
 
 
