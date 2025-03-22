@@ -60,8 +60,10 @@ def cache(func):
     cache_dict = {}
     def inner(*args):
         if args in cache_dict:
+            print('cache hit')
             return cache_dict[args]
         else:
+            print('cache miss')
             result = func(*args)
             cache_dict[args] = result
             return result
@@ -69,10 +71,12 @@ def cache(func):
 
 @cache
 def add(a, b):
+    print('add running')
     return a+b
 
 @cache
 def mult(a, b):
+    print('mult running')
     return a*b
 
 print(add.__closure__)
