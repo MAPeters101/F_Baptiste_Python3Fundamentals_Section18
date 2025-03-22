@@ -31,6 +31,28 @@ print(mult(1,2))
 print(cache_dict)
 print('-'*80)
 
+def cache(func):
+    def inner(*args):
+        print('initializing cache...')
+        cache_dict = {}
+        if args in cache_dict:
+            return cache_dict[args]
+        else:
+            result = func(*args)
+            cache_dict[args] = result
+            return result
+    return inner
+
+@cache
+def add(a, b):
+    return a+b
+
+print(add(1,2))
+print(cache_dict)
+print()
+print(add(1,2))
+print(cache_dict)
+
 
 
 
