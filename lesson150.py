@@ -88,5 +88,37 @@ logger = logging.getLogger('Custom Log')
 logger.debug('debug message')
 logger.error('some error happened')
 logger.warning('warning message')
+print('='*80)
+print()
+
+from time import perf_counter
+
+def log(func):
+    def inner(*args, **kwargs):
+        start = perf_counter()
+        result = func(*args, **kwargs)
+        end = perf_counter()
+        logger.debug(f'called={func.__name__}, elapsed={end - start}')
+        return result
+    return inner
+
+@log
+def add(a,b,c):
+    return a+b+c
+
+@log
+def greet(name):
+    return f'Hello {name}!'
+
+@log
+def join(data, *, item_sep=',', line_sep='\n'):
+    return line_sep.join([item_sep.join(str(item) for item in row) for row in data])
+
+result = add(1,2,3)
+print(result)
 print('-'*80)
+
+
+
+
 
