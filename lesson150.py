@@ -71,8 +71,13 @@ def join(data, *, item_sep=',', line_sep='\n'):
 join = log(join)
 
 print(greet('Python'))
+print('-'*80)
 
-
+@log
+def add(a, b, c):
+    return a+b+c
+print(add(1,2,3))
+print('-'*80)
 
 
 
