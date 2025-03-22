@@ -88,6 +88,14 @@ print(add(1,2))
 print(add(2,3))
 print(add(1,2))
 print(add(2,3))
+print('-'*80)
+
+print(mult(1,2))
+print(mult(3,4))
+print(mult(1,2))
+print(mult(3,4))
+print('-'*80)
+
 
 
 
