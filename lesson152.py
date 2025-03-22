@@ -81,8 +81,13 @@ def mult(a, b):
 
 print(add.__closure__)
 print(mult.__closure__)
+print('-'*80)
 
-
+print(add(1,2))
+print(add(1,2))
+print(add(2,3))
+print(add(1,2))
+print(add(2,3))
 
 
 
