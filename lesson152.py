@@ -126,3 +126,31 @@ print()
 print(fib(20))
 print()
 print('='*80)
+
+@lru_cache(maxsize=100)
+def fib(n):
+    print(f'fib({n}) called...')
+    if n <= 1:
+        return n
+    return fib(n-1) + fib(n-2)
+
+print(fib(5))
+print()
+
+print(fib(8))
+print()
+
+print(fib(20))
+print()
+
+print(fib(40))
+print()
+
+print(fib(100))
+print()
+
+print(fib(300))
+print()
+
+print('-'*80)
+
