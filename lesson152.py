@@ -176,6 +176,13 @@ print()
 print(fib(1100))
 print()
 
-
 print('.'*80)
+
+@lru_cache()
+def my_func(l):
+    print('calling my_func')
+    return l
+
+print(my_func(10))
+#print(my_func([1,2,3]))
 
