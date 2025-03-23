@@ -96,6 +96,19 @@ print(mult(1,2))
 print(mult(3,4))
 print('-'*80)
 
+from functools import lru_cache
+@lru_cache(maxsize=2)
+def add(a, b):
+    print('add called...')
+    return a+b
+
+print(add(1,2))
+print(add(3,4))
+print(add(1,2))
+print(add(3,4))
+print(add(5,6))
+print(add(3,4))
+print(add(1,2))
 
 
 
